@@ -1,10 +1,113 @@
----
-title: 前端課程報名
-layout: ./app/layout.ejs
-engine: ejs
-current: frontend-application.html
----
-<main>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    前端課程報名
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <header
+    class="header bg-fog py-6 relative before:content-[''] before:absolute before:w-1/2 before:-bottom-0.5
+    before:h-0.5 before:bg-neo-green after:content-[''] after:absolute after:w-1/2 after:left-1/2 after:-bottom-0.5 after:h-0.5 after:bg-neo-blue">
+
+    <div class="container">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="shake-horizontal md:flex md:items-end md:text-fog-light">
+          <img src="./assets/images/logo2.svg" alt="logo"
+            class="h-6 w-6 object-contain md:w-[42px] md:h-[42px] md:mr-4">
+          <p class="hidden md:block"> Coding Home｜</p>
+        </a>
+
+        <nav>
+          <a href="#" class="relative md:static">
+            <span class="hamMenu material-icons text-neo-green text-2xl leading-none md:hidden">
+              drag_handle
+            </span>
+            <ul
+              class="dropdownMenu hidden absolute left-0 right-0 top-[79px] bg-fog py-3 z-10 text-center md:static md:flex ">
+              <li><a href="index.html" class="shake-rotate block text-4.5 py-3 hover:opacity-40 md:px-6 md:py-auto">首頁</a></li>
+              <li><a href="courses.html" class="shake-rotate block text-4.5 py-3 hover:opacity-40 md:px-6 md:py-auto">課程介紹</a></li>
+              <li class="md:-mr-6"><a href="#" class="shake-rotate text-4.5 py-3 hover:opacity-40 flex items-center justify-center 
+                 md:px-6 md:py-auto" data-modal-toggle="loginModal">
+                  <span class="material-icons mr-1">
+                    account_circle
+                  </span>
+                  登入</a></li>
+            </ul>
+          </a>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- login modal  -->
+
+  <div id="loginModal" tabindex="-1"
+    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full">
+
+    <div class="bg-fog py-10 px-6 border border-white relative md:pb-12 md:px-16 lg:pt-6 lg:px-[150px]">
+      <button type="button"
+        class="absolute top-[21px] right-6 text-white bg-transparent hover:scale-125 rounded-lg text-2xl ml-auto inline-flex items-center lg:top-[30px]"
+        data-modal-toggle="loginModal">
+        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span class="sr-only">Close modal</span>
+      </button>
+      <h2 class="text-2xl font-bold mb-6 text-center">登入</h2>
+      <div class="mt-8 min-w-[288px] md:min-w-[336px]">
+        <div class="grid grid-cols-1 gap-4">
+          <label class="block text-fog-light">
+            <span>信箱</span>
+            <input type="email" class="mt-1 block w-full py-2 px-4 placeholder-fog-light bg-deep-400 
+          border border-white rounded focus:ring focus:ring-neo-green" placeholder="請輸入信箱">
+          </label>
+          <label class="block text-fog-light">
+            <span>密碼</span>
+            <input type="password" class="mt-1 block w-full py-2 px-4 placeholder-fog-light
+             bg-deep-400 border border-white rounded focus:ring focus:ring-neo-green" placeholder="請輸入密碼">
+          </label>
+          <button type="button"
+            class="block bg-gradient-to-r from-neo-blue to-neo-green rounded-lg py-2 px-4 mb-6">登入</button>
+          <h4 class="text-fog-light text-center mb-4 relative">
+            <span class="px-4 bg-fog absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">其他登入方式</span>
+            <span class="absolute left-0 top-1/2 border border-fog-light w-full z-10"></span>
+          </h4>
+
+          <button type="button" class="py-2 border border-white rounded bg-transparent 
+          flex justify-center hover:border-neo-green hover:text-neo-green">
+            <img src="./assets/images/icon_fb.svg" alt="fb icon" class="h-6 w-6 object-contain mr-8 ">
+            Facebook 登入</button>
+          <button type="button" class="py-2 border border-white rounded bg-transparent 
+                  flex justify-center hover:border-neo-green hover:text-neo-green">
+            <img src="./assets/images/icon_google.svg" alt="google icon" class="h-6 w-6 object-contain mr-8 ">
+            Google 登入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
     <div class="bg-black pt-[33px] pb-16 lg:bg-fog lg:pb-[55px]">
         <div class="container">
             <div class="grid grid-cols-12">
@@ -218,3 +321,52 @@ current: frontend-application.html
         </div>
     </section>
 </main>
+
+    <footer class="footer bg-deep-700  text-center  p-4">
+      <small class="text-xs font-az-mono text-deep-200">
+        Coding Home © 2022 All Rights Reserved
+      </small>
+    </footer>
+
+    <!-- aos  animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+// You can also pass an optional settings object
+// below listed default settings
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+  
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 150, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 800, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+    </script>
+    <!--  -->
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/locales/zh-TW.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
