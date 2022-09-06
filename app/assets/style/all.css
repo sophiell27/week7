@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box;
+    }
+    html {
+     font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, Arial, sans-serif;
+     @apply text-white
+
+     }
+     img{
+         max-width: 100%;
+         height: auto;
+         vertical-align: middle;
+     }
+     
+   
+   }
+
+@layer components {
+    .btn{
+        border: 1px solid #fff;
+        padding: 16px 32px;
+        border-radius: 8px;
+
+    }
+
+    .studentPagination .studentPaginationBullet{
+        width: 8px;
+        height: 8px;
+        margin-left: 4px;
+        margin-right: 4px;
+        background: #62DB54;
+        opacity: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 8px;
+        border-radius: 50%;
+    }
+    .studentPagination .studentPaginationBullet-active {
+        background: #62DB54;
+        width: 16px;
+        border-radius: 20%/50%;
+    }
+
+    .btnActive{
+    border: 1px solid #62DB54;
+    color: #62DB54;
+    }
+
+    /* date picker  */
+    .dateBtn{
+        @apply text-black;
+        @apply bg-fog-light
+    }
+
+
+}
+@layer utilities{
+    .grayscale {
+        filter: grayscale(100%);
+    }
+}
+
+
+  

@@ -1,0 +1,220 @@
+---
+title: 前端課程報名
+layout: ./app/layout.ejs
+engine: ejs
+current: frontend-application.html
+---
+<main>
+    <div class="bg-black pt-[33px] pb-16 lg:bg-fog lg:pb-[55px]">
+        <div class="container">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12">
+                    <div class="border border-fog-light mx-8 relative">
+                        <div
+                            class="progressBar1 hidden absolute w-1/2 h-1 bg-neo-green top-1/2 -translate-y-1/2 left-0">
+                        </div>
+                        <div
+                            class="progressBar2 hidden absolute w-1/2 h-1 bg-neo-green top-1/2 -translate-y-1/2 right-0">
+                        </div>
+                        <div class="absolute -left-8 -top-2.5">
+                            <button type="button"
+                                class="doneBtn1 w-5 h-5 rounded-full bg-neo-green flex items-center justify-center mb-1 mx-auto">
+                                <span class="material-icons text-xs">
+                                    done
+                                </span>
+                            </button>
+                            <p class="text-center text-neo-green">課程報名</p>
+                        </div>
+                        <div class="absolute left-1/2 -translate-x-1/2 -top-2.5">
+                            <button type="button"
+                                class="progressBtn2 text-xs text-fog-light font-az-mono leading-none 
+                                w-5 h-5 bg-black rounded-full border-2 border-fog-light flex items-center justify-center mb-1 mx-auto">
+                                2
+                            </button>
+                            <div class="doneBtn2 hidden">
+                                <button type="button"
+                                    class="w-5 h-5 rounded-full bg-neo-green flex items-center justify-center mb-1 mx-auto">
+                                    <span class="material-icons text-xs">
+                                        done
+                                    </span>
+                                </button>
+                            </div>
+                            <p class="progressText2 text-center text-fog-light">信用卡付款</p>
+                        </div>
+                        <div class="absolute -right-8 -top-2.5">
+                            <button type="button"
+                                class="progressBtn3 text-xs text-fog-light font-az-mono leading-none 
+                                w-5 h-5 bg-black rounded-full border-2 border-fog-light flex items-center justify-center mb-1 mx-auto">
+                                3
+                            </button>
+                            <div class="doneBtn3 hidden">
+                                <button type="button"
+                                    class="w-5 h-5 rounded-full bg-neo-green flex items-center justify-center mb-1 mx-auto">
+                                    <span class="material-icons text-xs">
+                                        done
+                                    </span>
+                                </button>
+                            </div>
+
+                            <p class="progressText3 text-center text-fog-light">付款成功</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment  -->
+    <section class="paymentStepOne  bg-black pb-10 lg:pb-36 lg:px-11">
+        <div class="container">
+            <!-- step1  -->
+            <div class="lg:flex items-center">
+                <div class="bg-fog p-6 mb-11 lg:py-12 lg:px-8 lg:w-4/12 lg:-mr-[72px]
+           relative after:content-[''] after:absolute after:bottom-0 after:translate-y-full 
+           after:left-1/2 after:-translate-x-1/2 after:w-0 after:border-[12px] after:border-t-fog 
+           after:border-l-transparent after:border-r-transparent after:border-b-transparent 
+           lg:after:left-full lg:after:translate-x-0 lg:after:bottom-1/2 lg:after:translate-y-1/2 lg:after:z-20
+           lg:after:border-l-fog lg:after:border-t-transparent ">
+
+                    <img src="./assets/images/teacher01.jpg" alt="teacher pic" class="w-[100px] h-[100px]
+                rounded-full object-contain border-[3px] border-neo-green mx-auto mb-4 lg:mb-6">
+                    <h3 class="text-base font-bold mb-2 text-center lg:mb-1 lg:text-4.5 ">
+                        2022 Python 全攻略｜從入門到實務
+                    </h3>
+                    <p class="bg-transparent text-neo-green text-center mb-2">前端語言</p>
+                    <p>
+                        帶領無基礎、文組生、對網頁設計有興趣的人，進入網站工程領域的基礎課，將從最基礎的 HTML 語法出發。
+                    </p>
+                </div>
+                <div class="bg-deep-400 text-center p-6 lg:w-8/12 lg:pl-[114px] lg:py-12 lg:pr-8 lg:mt-12">
+                    <h1 class="text-2xl font-bold mb-6">課程報名</h1>
+                    <h3 class="text-4.5 font-bold mb-4 lg:text-left">選擇付款方式</h3>
+
+                    <div class="method mb-8 grid grid-cols-2 gap-2 lg:grid-cols-none lg:flex lg:mb-12">
+                        <button class="p-4 border border-white rounded-lg lg:w-auto lg:px-8">信用卡付款</button>
+                        <button class="p-4 border border-white rounded-lg lg:w-auto lg:px-8">超商繳款</button>
+                        <button class="p-4 border border-white rounded-lg lg:w-auto lg:px-8">ATM轉帳</button>
+                        <button class="p-4 border border-white rounded-lg lg:w-auto lg:px-8">12期分期付款</button>
+                    </div>
+
+                    <div class="">
+                        <h3 class="text-4.5 font-bold mb-4 lg:mb-6 lg:text-left">訂單資訊</h3>
+                        <div class="grid grid-cols-1 text-left lg:grid-cols-2 gap-x-12 gap-y-6">
+                            <label class="block mb-4 lg:col-span-1 lg:mb-0">
+                                <span class="text-fog-light">姓名</span>
+                                <input type="text"
+                                    class="mt-2 block w-full py-2 bg-transparent border border-white rounded placeholder-fog-light focus:ring focus:ring-neo-green"
+                                    placeholder="請輸入姓名">
+                            </label>
+                            <label class="block mb-4 lg:col-span-1 lg:mb-0">
+                                <span class="text-fog-light">電話</span>
+                                <input type="tel"
+                                    class="mt-2 block w-full py-2 bg-transparent border border-white rounded placeholder-fog-light focus:ring focus:ring-neo-green"
+                                    placeholder="請輸入電話號碼">
+                            </label>
+                            <label class="block mb-4 lg:col-span-2 lg:mb-0">
+                                <span class="text-fog-light">Email</span>
+                                <input type="email"
+                                    class="mt-2 block w-full py-2 bg-transparent border border-white rounded placeholder-fog-light focus:ring focus:ring-neo-green"
+                                    placeholder="請輸入Email">
+                            </label>
+
+                            <label class="block mb-4 lg:col-span-1 lg:mb-0">
+                                <span class="text-fog-light">課程</span>
+                                <select
+                                    class="mt-2 block w-full py-2 bg-deep-400 border border-white rounded focus:ring focus:ring-neo-green">
+                                    <option>1堂50分鐘</option>
+                                    <option>3堂50分鐘</option>
+                                    <option>10堂50分鐘</option>
+                                    <option selected>20堂50分鐘</option>
+                                    <option>洽談報價</option>
+                                </select>
+                            </label>
+                            <label class="block mb-6 lg:col-span-1 lg:mb-0">
+                                <span class="text-fog-light">上課日期</span>
+                                <input type="text" name="inputDate" placeholder="請選擇日期" class="text-black 
+                        mt-2 block w-full py-2 bg-transparent border border-white rounded 
+                        placeholder-fog-light focus:ring focus:ring-neo-green">
+                            </label>
+
+
+                            <label class="block mb-6 lg:col-span-2 lg:mb-0">
+                                <span class="text-fog-light">上課地點</span>
+                                <input type="text"
+                                    class="mt-2 block w-full py-2 bg-transparent border border-white rounded placeholder-fog-light focus:ring focus:ring-neo-green"
+                                    placeholder="請輸入上課地點">
+                            </label>
+                            <div class="md:flex md:justify-between md:items-center lg:flex-none lg:col-span-2">
+                                <input type="text" value="NT$1600"
+                                    class="text-4.5 leading-[21px] font-az-mono bg-transparent border-none p-0 focus:ring-0 mb-8 md:mb-0 w-1/2"
+                                    readonly>
+                                <button type="button"
+                                    class="toPayment w-full py-2 px-12 bg-gradient-to-r from-neo-blue to-neo-green rounded-lg md:w-auto">前往結賬</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- step2  -->
+    <section class="paymentStepTwo hidden bg-black pt-6 pb-16 lg:pt-12 lg:pb-20">
+        <div class="container">
+            <div class="bg-deep-400 p-6 md:w-[416px] mx-auto md:px-8 md:py-12">
+                <h2 class="text-2xl font-bold mb-6 text-center">信用卡付款</h2>
+                <h3 class="text-4.5 font-bold mb-4 text-center">請輸入信用卡資訊進行付款</h3>
+                <div class="text-left">
+                    <label class="block mb-4">
+                        <span class="text-fog-light">信用卡帳號</span>
+                        <input type="number"
+                            class="mt-2 block w-full py-2 bg-transparent border border-white rounded placeholder-fog-light focus:ring focus:ring-neo-green"
+                            placeholder="Xxxx-xxxx-xxxx-xxxx">
+                    </label>
+                    <label class="block mb-4">
+                        <span class="text-fog-light">安全碼</span>
+                        <input type="password"
+                            class="mt-2 block w-full py-2 bg-transparent border border-white rounded placeholder-fog-light focus:ring focus:ring-neo-green"
+                            placeholder="***">
+                    </label>
+                    <label class="block mb-4">
+                        <span class="text-fog-light">有效日期</span>
+                        <input type="number"
+                            class="mt-2 block w-full py-2 bg-transparent border border-white rounded placeholder-fog-light focus:ring focus:ring-neo-green"
+                            placeholder="(MM-YY)">
+                    </label>
+                    <div class="md:flex md:justify-between md:items-center">
+                        <input type="text" value="NT$1600"
+                            class="text-4.5 leading-[21px] font-az-mono bg-transparent border-none p-0 focus:ring-0 mb-8 md:mb-0 w-1/2"
+                            readonly>
+                        <button type="button"
+                            class="toFinish w-full py-2 px-12 bg-gradient-to-r from-neo-blue to-neo-green rounded-lg md:w-auto">下一步</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- step3  -->
+    <section class="paymentStepThree hidden bg-black pb-[276px] lg:pb-[135px] lg:pt-12">
+        <div class="container">
+            <div class="bg-deep-400 p-6 md:w-[416px] mx-auto md:px-8 md:py-12">
+                <h2 class="text-2xl font-bold mb-12 flex items-center justify-center">
+                    <span class="material-icons-outlined text-5xl leading-0 text-neo-green mr-4">
+                        verified
+                        </span>
+                        完成訂購
+
+                </h2>
+
+                <p class="mb-10">
+                    恭喜您已完成「2022 Python 全攻略｜從入門到實務」課程報名，請注意郵件訊息，家教老師將與您聯繫！
+                </p>
+
+                <a href="courses.html">
+                    <button type="button" class="block mx-auto py-2 px-12 bg-gradient-to-r from-neo-blue 
+                    to-neo-green rounded-lg">看看其他課程
+                </button></a>
+
+            </div>
+        </div>
+    </section>
+</main>
